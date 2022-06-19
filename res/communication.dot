@@ -1,0 +1,29 @@
+// dot .\communication.dot -o "communication.svg" -Tsvg
+
+digraph communication {
+
+    rankdir = LR
+
+    /* Entities */
+    Net
+    Decoder
+    Encoder
+    NetworkConnection
+    NetworkListener
+    UI
+
+    /* Relationships */
+    Encoder -> Net [label = "Encoder Thread"]
+    Net -> Decoder [label = "Decoder Thread"]
+    Decoder -> NetworkConnection [label = "Decoder Thread"]
+    NetworkConnection -> Encoder [label = "UI/User Thread"]
+    NetworkConnection -> NetworkListener [label = "Decoder Thread"]
+    NetworkListener -> NetworkConnection [label = "Any Thread"]
+    NetworkListener -> UI [label = "UI Thread"]
+    UI -> NetworkConnection [label = "UI Thread"]
+
+
+    /* Ranks */
+    { rank = same; Decoder; Encoder; };
+    { rank = min; Net; };
+}

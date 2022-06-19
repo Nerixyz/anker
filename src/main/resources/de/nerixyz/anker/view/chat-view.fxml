@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<VBox xmlns:fx="http://javafx.com/fxml" alignment="CENTER"
+      xmlns="http://javafx.com/javafx"
+      fx:controller="de.nerixyz.anker.controllers.ChatController"
+      prefHeight="400.0" prefWidth="600.0">
+    <Label>Chat</Label>
+    <ListView fx:id="chatMessagesBox">
+
+    </ListView>
+    <TextField fx:id="chatInputBox" onKeyPressed="#onChatInputKeyPressed" promptText="Message"/>
+</VBox>

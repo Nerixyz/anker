@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<VBox xmlns:fx="http://javafx.com/fxml" alignment="CENTER"
+      xmlns="http://javafx.com/javafx"
+      fx:controller="de.nerixyz.anker.controllers.JoinChatController"
+      prefHeight="400.0" prefWidth="600.0">
+    <Label>Select port</Label>
+    <TextField fx:id="userNameField" promptText="Username" text="HelpingHedgehog"/>
+    <TextField fx:id="portField" promptText="port" text="567"/>
+    <Button onAction="#onJoinClicked">Join</Button>
+</VBox>

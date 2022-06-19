@@ -27,7 +27,7 @@ In the dialog, add `Allow multiple instances` in the `Add options` menu and clic
 ![](https://i.imgur.com/qBHo4H1.png)
 </details>
 
-Now run the gradle task two times to get two instances by clicking two times on the ▶ button (`SHIFT` + `F10`).
+Now run the gradle task two times to get two instances.
 
 # Architecture
 
